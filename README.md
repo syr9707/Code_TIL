@@ -80,6 +80,64 @@
 
 ## 개념 
 
+### 입출력
+
+> BufferedReader를 사용하는 것이 Scanner를 사용하는 것보다 빠름
+
+**BuffrerdReader 사용법**
+
+```java
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+Strng input = br.readLine();
+```
+
+
+
+### StringTokenizer
+
+> StringTokenizer가 BufferedReader보다 빠르게 사용 될 수 있음
+
+**예제**
+
+<StringTokenizer 사용>
+
+```java
+BufferedReader br = new BufferedReader(new InputStreamReader(system.in));
+StringTokenizer st = new StirngTokenizer(br.readLine());
+
+String A = st.nextToken();
+String B = st.nextToken();
+String C = st.nextToken();
+String D = st.nextToken();
+```
+
+
+
+<BufferedReader 사용>
+
+```java
+BufferedReader br = new BufferedReader(new InputStreamReader(system.in));
+String[] input = br.readLine().split(" ");
+```
+
+
+
+### split() 
+
+> 문자열 구분
+
+**사용법 (예제)**
+
+```java
+String str = "alksjdalkfj@jsdaklfj";
+String[] strAry = str.split("@");
+
+for(String s : strAry) 
+    System.out.println(s);
+```
+
+
+
 ### StringTokenizer 클래스란?
 
 > 하나의 문자열을 여러 개의 토큰으로 분리
