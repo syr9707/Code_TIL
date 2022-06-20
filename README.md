@@ -74,3 +74,59 @@
 
 
 
+------------------------------------------------------
+
+
+
+## 개념 
+
+### StringTokenizer 클래스란?
+
+> 하나의 문자열을 여러 개의 토큰으로 분리
+
+**사용법**
+
+```java
+1. StringTokenizer st = new StringTokenizer(문자열);
+---> 띄어쓰기 기준으로 문자열을 분리
+    
+2. StringTokenizer st = new StringTokenizer(문자열, 구분자);
+---> 구분자를 기준으로 문자열을 분리
+
+3. StringTokenizer st = new StringTokenizer(문자열, 구분자, true/false);
+---> 구분자를 기준으로 문자열을 분리할 때, 
+	구분자도 토큰으로 넣을 지(true),
+	구분자는 분리된 문자열 토큰에 포함 안 시킬 지(false)
+   * 디폴트 : false 
+```
+
+
+
+**예제**
+
+```java
+String str = "IT 블로그 추천 -홍길동의 블로그:www.asvdsasa.com";
+StringTokenizer st = new StringTokenizer("-:");
+
+while(st.hasMoreTokens()) {
+    System.out.println(st.nextToken());
+}
+```
+
+*구분자는 하나의 문자로 구성될 필요는 없다*
+
+
+
+* hasMoreTokens() : 남아있는 토큰이 있다면 true 리턴, 아니면 false
+* nextToken() : 객체에서 다음 토큰을 반환
+
+
+
+### 삼항 연산자
+
+> 변수 = (조건문) ? (true일 때의 연산) : (false일 때의 연산);
+
+---> 속도가 빨라지는 것은 아님
+
+
+
