@@ -80,9 +80,32 @@
 
 ## 개념 
 
-### 입출력
+### 입출력 (BufferedReader)
 
+> BufferedReader는 엔터만 경계로 인식 --> 받은 데이터 String으로 고정 (다른 타입 입력 받을 시 형변환!)
+>
 > BufferedReader를 사용하는 것이 Scanner를 사용하는 것보다 빠름
+>
+> readLine() 사용 시 : 예외처리 필수! 
+
+
+
+**종합 활용법 예제 : (배열 크기) (배열 숫자들...)**
+
+```java
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+int N = Integer.parseInt(st.nextToken()); // 배열 크기 받기
+int[] arr = new int[N];
+
+StringTokenizer st = new StirngTokenizer(br.readLine());
+for(int i = 0; i < N; i++) {
+    arr[i] = Integer.parseInt(st.nextToken());
+}
+
+br.close(); 
+```
+
+
 
 **BuffrerdReader 사용법**
 
@@ -90,6 +113,24 @@
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 Strng input = br.readLine();
 ```
+
+**int 타입 받을 시** 
+
+```java
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+int i = Integer.parseInt(br.readLine());
+```
+
+**또 다른 예제 : 공백 단위로 데이터 가공**
+
+```java
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+StringTokenizer st = new StirngTokenizer(br.readLine());
+int N = Integer.parseInt(st.nextToken());
+int M = Integer.parseInt(st.nextToken());
+```
+
+
 
 
 
@@ -102,7 +143,7 @@ Strng input = br.readLine();
 <StringTokenizer 사용>
 
 ```java
-BufferedReader br = new BufferedReader(new InputStreamReader(system.in));
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 StringTokenizer st = new StirngTokenizer(br.readLine());
 
 String A = st.nextToken();
