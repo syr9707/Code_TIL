@@ -12,6 +12,13 @@
 >
 > 원소 뺴냄 : poll(), remove()
 
+|  | 예외 발생 | 값 리턴 |
+| --- | --- | --- |
+| 추가 | add | offer |
+| 삭제 | remove | poll |
+| 검사 | element | peek |
+
+
 ```java
 import java.util.*;
 
